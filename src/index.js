@@ -1,6 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import WebFont from "webfontloader";
 
-ReactDOM.render(<h1>Hello World</h1>, document.getElementById("spotify-app-root"));
+import App from "./app/App";
+
+WebFont.load({
+  google: {
+    families: ["Raleway", "Baloo Bhai", "Roboto", "sans-serif", "cursive"]
+  }
+});
+
+ReactDOM.render(<App />, document.getElementById("spotify-app-root"));
 
 module.hot.accept();
