@@ -6,7 +6,7 @@ import Sushant from "./components/sushant/component";
 const App = () => (
   <React.Fragment>
     <h1 className={styles.heading}>Scss modules working...</h1>
-    <Sushant />
+    <Sushant name={"sda"} />
   </React.Fragment>
 );
 export default App;
