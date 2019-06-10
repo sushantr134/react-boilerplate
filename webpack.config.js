@@ -25,11 +25,11 @@ const postcssLoader = {
 };
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/index.js"),
+  entry: path.resolve(__dirname, "src/index.tsx"),
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|js|jsx|tsx)$/,
         exclude: /node_modules/,
         use: ["babel-loader"]
       },
@@ -45,6 +45,7 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
+          "css-modules-typescript-loader",
           { loader: "css-loader", options: { modules: true, localIdentName: "[name]__[local]___[hash:base64:5]", camelCase: true } },
           "sass-loader",
           postcssLoader
@@ -76,6 +77,9 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
     filename: "spotify-bundle.js"
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
   },
   mode: process.env.NODE_ENV,
   devServer:

@@ -17,7 +17,6 @@ describe("Sushant Component", () => {
       const expectedProps = {
         name: "112"
       };
-
       const propsErrors = checkPropTypes(Sushant.propTypes, expectedProps, "props", Sushant.name);
       expect(propsErrors).toBeUndefined();
     });

@@ -1,12 +1,12 @@
-import React from "react";
+import * as React from "react";
 import styles from "./app-global.module.scss";
 
 import Sushant from "./components/sushant/component";
 
-const App = () => (
-  <React.Fragment>
+const App: React.FunctionComponent<{}> = () => (
+  <>
     <h1 className={styles.heading}>Scss modules working...</h1>
     <Sushant name={"sda"} />
-  </React.Fragment>
+  </>
 );
 export default App;

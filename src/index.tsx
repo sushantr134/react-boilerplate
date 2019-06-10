@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import ReactDOM from "react-dom";
 import WebFont from "webfontloader";
 
@@ -12,4 +12,4 @@ WebFont.load({
 
 ReactDOM.render(<App />, document.getElementById("spotify-app-root"));
 
-module.hot.accept();
+//module.hot.accept();

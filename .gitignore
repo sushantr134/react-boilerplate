@@ -3,5 +3,8 @@ node_modules
 build
 
 *.env
+*.scss.d.ts
+*.css.d.ts
 
 .vscode
+*.log
