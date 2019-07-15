@@ -1,15 +1,18 @@
 import * as React from "react";
+import { RouteComponentProps } from "react-router-dom";
 
-interface ComponentProps {
-  name?: String;
+interface RecvParametersFromRoute {
+  myname: string;
 }
+
+interface ComponentProps extends RouteComponentProps<RecvParametersFromRoute> {}
 
 class Sushant extends React.Component<ComponentProps, {}> {
   constructor(props: ComponentProps) {
     super(props);
   }
   render() {
-    return <h1 data-test='heading'>{this.props.name}</h1>;
+    return <h1 data-test="heading">{this.props.match.params.myname}</h1>;
   }
 }
 

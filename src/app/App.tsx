@@ -1,12 +1,25 @@
 import * as React from "react";
-import styles from "./app-global.module.scss";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Routes } from "../routes";
 
-import Sushant from "./components/sushant/component";
+const App: React.FunctionComponent<{}> = () => {
+  const RouterRoot = (
+    <BrowserRouter>
+      <Switch>
+        {Routes.map((route, i) => {
+          return (
+            <Route
+              key={i}
+              path={route.path}
+              exact={route.exact}
+              component={route.component}
+            />
+          );
+        })}
+      </Switch>
+    </BrowserRouter>
+  );
 
-const App: React.FunctionComponent<{}> = () => (
-  <>
-    <h1 className={styles.heading}>Scss modules working...</h1>
-    <Sushant name={"sda"} />
-  </>
-);
+  return RouterRoot;
+};
 export default App;
