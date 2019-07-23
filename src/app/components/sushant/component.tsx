@@ -12,7 +12,7 @@ class Sushant extends React.Component<ComponentProps, {}> {
     super(props);
   }
   render() {
-    return <h1 data-test="heading">{this.props.match.params.myname}</h1>;
+    return <h1 data-test='heading'>Netlify added, data recv from params is :- {this.props.match.params.myname}</h1>;
   }
 }
 

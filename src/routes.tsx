@@ -3,7 +3,7 @@ import Home from "./app/components/Home/index";
 
 interface RoutesType {
   path: string;
-  component: React.ReactNode;
+  component: React.ComponentClass<any> | React.FunctionComponent<any>;
   exact: boolean;
 }
 
