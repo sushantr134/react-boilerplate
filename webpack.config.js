@@ -85,6 +85,12 @@ module.exports = {
   devServer:
     process.env.NODE_ENV === "development"
       ? {
+        proxy: {
+          '/.netlify': {
+            target: 'http://localhost:9000',
+            pathRewrite: { '^/.netlify/functions': '' }
+          }
+        },
           contentBase: path.join(__dirname, "build"),
           hot: true,
           compress: true,
