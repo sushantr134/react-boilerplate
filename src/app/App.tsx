@@ -7,14 +7,7 @@ const App: React.FunctionComponent<{}> = () => {
     <BrowserRouter>
       <Switch>
         {Routes.map((route, i) => {
-          return (
-            <Route
-              key={i}
-              path={route.path}
-              exact={route.exact}
-              component={route.component}
-            />
-          );
+          return <Route key={i} path={route.path} exact={route.exact} component={route.component} />;
         })}
       </Switch>
     </BrowserRouter>
