@@ -97,7 +97,7 @@
     "@types/webfontloader": "^1.6.29",
     "@types/webpack": "^4.4.32",
     "dotenv": "^8.0.0",
-    "express": "^4.17.0",
+    "express": "^4.17.3",
     "lodash": "^4.17.14",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
